@@ -1,0 +1,79 @@
+.infoHeader{
+    color: $blue;
+    border-bottom: 1px solid $grey-3;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    .back{
+        cursor: pointer;
+    }
+    a{
+        color: $blue;
+    }
+}
+
+.summary{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px dotted $grey-1;
+    .summaryLabel{
+        flex: 0 0 20%;
+        text-align: center;
+        label{
+            font-weight: 700;
+        }
+    }
+    .summaryValue{
+        flex: 0 0 75%;
+    }
+}
+
+.description{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px dotted $grey-1;
+    .descriptionLabel{
+        flex: 0 0 20%;
+        text-align: center;
+        label{
+            font-weight: 700;
+        }
+    }
+    .descriptionValue{
+        flex: 0 0 75%;
+    }
+}
+
+.commentHeader{
+    padding: 15px;
+    text-align: center;
+    label{
+        font-weight: 700;
+    }
+}
+
+.ticketInfo{
+    display: flex;
+    flex-direction:column;
+    padding:5px;
+    margin-bottom: 15px;
+    background-color: $backgroud-grey ;
+    border-radius: 10px;
+    .comment{
+        padding: 10px;
+    }
+    .ticketMeta{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: $comment_blue;
+        a{
+            color: $comment_blue;
+        }
+        font-weight: 600;
+    }
+}

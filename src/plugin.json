@@ -1,0 +1,25 @@
+{
+	"type": "panel",
+	"name": "JIRA",
+	"id": "fk-jira",
+
+	"metrics": true,
+	"annotations": true,
+
+	"info": {
+    		"description": "JIRA plugin to monitor all the tickets raised through Alertz",
+    		"author": {
+      			"name": "Hatim,Sahil,Sridhar,Satya",
+      			"url": "http://abc"
+		},
+		"logos": {
+      			"small": "img/alert_ui.png",
+      			"large": "img/alert_ui.png"
+    		},
+
+    	"keywords": ["alertz","fk","jira"],
+    	"version": "1.0.0",
+    	"updated": "2018-06-29"
+  	}
+
+}

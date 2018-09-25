@@ -1,0 +1,185 @@
+.header {
+  background: #efefef;
+  padding: 15px 0px 15px 0px;
+  text-align: center; }
+
+.listHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+  color: #2AB2E4;
+  border-bottom: 1px solid #dfdfdf;
+  margin-left: 5px; }
+  .listHeader .nameHeader {
+    cursor: pointer;
+    flex: 0 0 30%; }
+  .listHeader .assigneeHeader {
+    flex: 0 0 20%; }
+  .listHeader .keyHeader {
+    flex: 0 0 15%; }
+  .listHeader .statusHeader {
+    flex: 0 0 10%;
+    text-align: center; }
+  .listHeader .stateHeader {
+    flex: 0 0 15%;
+    text-align: center; }
+  .listHeader .manageHeader {
+    flex: 0 0 7%; }
+
+.listUtils {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px; }
+  .listUtils .projectInfo {
+    background-color: #2ca09c;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    width: 150px;
+    justify-content: space-around; }
+    .listUtils .projectInfo .projectName {
+      font-weight: 800; }
+
+@media screen and (min-width: 800px) {
+  .ticketList {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px dotted #efefef; }
+    .ticketList .ruleName {
+      cursor: pointer;
+      flex: 0 0 30%; }
+    .ticketList .assignee {
+      flex: 0 0 20%; }
+    .ticketList .key {
+      flex: 0 0 15%; }
+      .ticketList .key a {
+        color: #004b91; }
+    .ticketList .status {
+      flex: 0 0 10%;
+      text-align: center; }
+    .ticketList .state {
+      flex: 0 0 15%;
+      text-align: center; }
+    .ticketList .manage {
+      flex: 0 0 7%;
+      text-align: center; }
+    .ticketList i {
+      cursor: pointer;
+      font-size: 20px;
+      color: #d64141; }
+    .ticketList label {
+      cursor: pointer; }
+    .ticketList:hover {
+      background-color: #efefef; } }
+
+@media screen and (max-width: 800px) {
+  .ticketList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px dotted #efefef; }
+    .ticketList .ruleName {
+      cursor: pointer;
+      flex: 0 0 30%; }
+    .ticketList .assignee {
+      flex: 0 0 20%; }
+    .ticketList .key {
+      flex: 0 0 15%; }
+      .ticketList .key a {
+        color: #004b91; }
+    .ticketList .status {
+      flex: 0 0 10%;
+      text-align: center; }
+    .ticketList .state {
+      flex: 0 0 15%;
+      text-align: center; }
+    .ticketList .manage {
+      flex: 0 0 7%;
+      text-align: center; }
+    .ticketList i {
+      cursor: pointer;
+      font-size: 20px;
+      color: #d64141; }
+    .ticketList label {
+      cursor: pointer; }
+    .ticketList:hover {
+      background-color: #efefef; } }
+
+.ruleSearch {
+  width: 300px;
+  height: 40px;
+  border-bottom: 1px solid #30709e;
+  margin: 5px 0px 0px 10px;
+  padding: 5px; }
+
+.infoHeader {
+  color: #2AB2E4;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; }
+  .infoHeader .back {
+    cursor: pointer; }
+  .infoHeader a {
+    color: #2AB2E4; }
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px dotted #efefef; }
+  .summary .summaryLabel {
+    flex: 0 0 20%;
+    text-align: center; }
+    .summary .summaryLabel label {
+      font-weight: 700; }
+  .summary .summaryValue {
+    flex: 0 0 75%; }
+
+.description {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 1px dotted #efefef; }
+  .description .descriptionLabel {
+    flex: 0 0 20%;
+    text-align: center; }
+    .description .descriptionLabel label {
+      font-weight: 700; }
+  .description .descriptionValue {
+    flex: 0 0 75%; }
+
+.commentHeader {
+  padding: 15px;
+  text-align: center; }
+  .commentHeader label {
+    font-weight: 700; }
+
+.ticketInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 15px;
+  background-color: #efefef;
+  border-radius: 10px; }
+  .ticketInfo .comment {
+    padding: 10px; }
+  .ticketInfo .ticketMeta {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #004b91;
+    font-weight: 600; }
+    .ticketInfo .ticketMeta a {
+      color: #004b91; }
+
+/*# sourceMappingURL=jira.light.css.map */

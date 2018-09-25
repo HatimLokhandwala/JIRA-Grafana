@@ -1,0 +1,156 @@
+.header{
+    background: $backgroud-grey;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+}
+
+.listHeader{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    color: #2AB2E4;
+    border-bottom: 1px solid #dfdfdf;
+    margin-left: 5px;
+    .nameHeader{
+        cursor: pointer;
+        flex: 0 0 30%;
+    }
+    .assigneeHeader{
+        flex: 0 0 20%;
+    }
+    .keyHeader{
+        flex: 0 0 15%;
+    }
+    .statusHeader{
+        flex: 0 0 10%;
+        text-align: center;
+    }
+    .stateHeader{
+        flex: 0 0 15%;
+        text-align: center;
+    }
+    .manageHeader{
+        flex: 0 0 7%;
+    }
+}
+
+.listUtils{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    .projectInfo{
+        background-color: #2ca09c;
+        color: #efefef;
+        padding: 10px;
+        border-radius: 6px;
+        display: flex; 
+        width: 150px;
+        justify-content: space-around;
+        .projectName{
+            font-weight: 800;
+            // color: #84153c;
+        }
+    }
+}
+
+.ticketList{
+    @media screen and (min-width: 800px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        border-bottom: 1px dotted $grey-1;
+        .ruleName{
+            cursor: pointer;
+            flex: 0 0 30%;
+        }
+        .assignee{
+            flex: 0 0 20%;
+        }
+        .key{
+            flex: 0 0 15%;
+            a{
+                color: $comment_blue;
+            }
+        }
+        .status{
+            flex: 0 0 10%;
+            text-align: center;
+        }
+        .state{
+            flex: 0 0 15%;
+            text-align: center;
+        }
+        .manage{
+            flex: 0 0 7%;
+            text-align: center;
+        }
+        i{
+            cursor: pointer;
+            font-size: 20px;
+            color: $action_trash;
+        }
+        label{
+            cursor: pointer;
+        }
+        &:hover{
+            background-color: $backgroud-grey;
+        }    
+    }
+
+    @media screen and (max-width: 800px){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+        align-items: center;
+        border-bottom: 1px dotted $grey-1;
+        .ruleName{
+            cursor: pointer;
+            flex: 0 0 30%;
+        }
+        .assignee{
+            flex: 0 0 20%;
+        }
+        .key{
+            flex: 0 0 15%;
+            a{
+                color: $comment_blue;
+            }
+        }
+        .status{
+            flex: 0 0 10%;
+            text-align: center;
+        }
+        .state{
+            flex: 0 0 15%;
+            text-align: center;
+        }
+        .manage{
+            flex: 0 0 7%;
+            text-align: center;
+        }
+        i{
+            cursor: pointer;
+            font-size: 20px;
+            color: $action_trash;
+        }
+        label{
+            cursor: pointer;
+        }
+        &:hover{
+            background-color: $backgroud-grey;
+        }    
+    }
+    
+}
+
+.ruleSearch{
+    width: 300px;
+    height: 40px;
+    border-bottom: 1px solid #30709e;
+    margin: 5px 0px 0px 10px;
+    padding: 5px;
+}

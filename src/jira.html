@@ -1,0 +1,94 @@
+<div>
+    <div class="header">
+        <i class="fa fa-ticket"></i>
+        JIRA
+    </div>
+    <div class="listView" ng-show="!ctrl.ticketViewFlag">
+        <div class="listHeader">
+            <div class="nameHeader"><label>RuleName </label> </div>
+            <div class="assigneeHeader"><label>Assignee</label></div>
+            <div class="keyHeader"><label>JIRA key</label></div>
+            <div class="statusHeader"><label>Rule State</label></div>
+            <div class="stateHeader"><label>Ticket State</label></div>
+            <div class="manageHeader"><label>Manage</label></div>
+        </div>
+        <div class="listUtils">
+            <div >
+                <input type="text" placeholder="Search by rule name, assignee, JIRA key" ng-model="ruleSearch" class="ruleSearch"> </input>
+            </div>
+            <div class="projectInfo">
+                <label>Project Key</label>
+                <label class="projectName">LOG</label>
+            </div>
+        </div>
+
+        <div class="ticketList" ng-repeat="ticketInfo in ctrl.result | filter: {ruleSearch} ">
+            <div ng-click="ctrl.updateView(ticketInfo)" 
+                 class="ruleName" 
+                 bs-tooltip="'Click to get ticket details'" 
+                 data-placement="top" > 
+                <label>{{ticketInfo.ruleName}}</label>
+            </div>
+            <div class="assignee"> <label>{{ticketInfo.assignee}}</label></div>
+            <div class="key" bs-tooltip="'Click to view the actual JIRA ticket'" data-placement="top">
+                <a target="_blank" href="https://jira.fkinternal.com/browse/{{ticketInfo.key}}">{{ticketInfo.key}}</a>
+            </div>
+            <div class="status" ng-style="ctrl.statusDisplay(ticketInfo.status)"> <label>{{ticketInfo.status}}</label></div>
+            <div class="state"> <label>{{ticketInfo.state}}</label></div>
+            <div class="manage"> 
+                <i  class="fa fa-trash trashEndpoint" 
+                bs-tooltip="'Delete Ticket in Alertz.  Note: This would not delete ticket in JIRA'" 
+                data-placement="top" 
+                ng-click="ctrl.deleteEndpoint(tagIndex,$index)">
+                </i>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticketView" ng-show="ctrl.ticketViewFlag">
+        
+        <div class="infoHeader">
+            <div class="back" ng-click="ctrl.updateView()"> 
+                <i class="fa fa-arrow-left"></i>
+                Back
+            </div>
+            <div>
+                {{ctrl.currentTicket.ruleName}}
+            </div>
+            <div>
+                <a target="_blank" href="https://jira.fkinternal.com/browse/{{ctrl.currentTicket.key}}">{{ctrl.currentTicket.key}}</a>
+            </div>
+        </div>
+        
+        <div class="summary">
+            <div class="summaryLabel"><label>Summary</label></div>
+            <div class="summaryValue"><label>Rsyslog buffer release (Circuit breaker)</label></div>
+        </div>
+        <div class="description">
+            <div class="descriptionLabel">
+                <label>Description</label>
+            </div>
+            <div class="descriptionValue">
+                <label>Configuration changes to release the logs being ingested from clients when they are blacklisted</label>
+            </div>
+        </div>
+        <div class="commentList">
+            <div class="commentHeader"><label>Comments</label> </div>
+            <div class="ticketInfo" ng-repeat="ticketComment in ctrl.commentList">
+                <div class="ticketMeta">
+                    <div class="user">
+                        <a 
+                        bs-tooltip="'Click to view user details'" 
+                        data-placement="top" 
+                        target="_blank" 
+                        href="https://jira.fkinternal.com/secure/ViewProfile.jspa?name={{ticketComment.user}}">Comment By: {{ticketComment.user}}</a></div>    
+                    <div class="date">Update Time: {{ticketComment.date}}</div>
+                </div>
+                <div class="comment">
+                        {{ticketComment.comment}}
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
